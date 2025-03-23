@@ -1,0 +1,130 @@
+/* Large Desktop (1024px to 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .creator {
+        top: -480px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.7) scaleY(.65);
+    }
+}
+
+/* Small Desktop (912px to 1023px) */
+@media (min-width: 912px) and (max-width: 1023px) {
+    .creator {
+        top: -400px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.55) scaleY(.5);
+    }
+}
+
+/* Larger Tablets (820px to 911px) */
+@media (min-width: 820px) and (max-width: 911px) {
+    .creator {
+        top: -450px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.5) scaleY(.45);
+    }
+}
+
+/* Tablets (768px to 819px) */
+@media (min-width: 768px) and (max-width: 819px) {
+    .creator {
+        top: -540px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.5) scaleY(.45);
+    }
+}
+
+/* Large Mobile to Small Tablet (641px to 767px) */
+@media (min-width: 641px) and (max-width: 767px) {
+    .creator {
+        top: -460px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.4) scaleY(.35);
+    }
+}
+
+/* Medium Mobile (541px to 640px) */
+@media (min-width: 541px) and (max-width: 640px) {
+    .creator {
+        top: -480px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.35) scaleY(.3);
+    }
+}
+
+/* Small-Medium Mobile (431px to 540px) */
+@media (min-width: 431px) and (max-width: 540px) {
+    .creator {
+        top: -540px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(.40) scaleY(.35);
+    }
+}
+
+/* iPhone 14 Pro Max (430px width) */
+@media (max-width: 430px) {
+    .creator {
+        /*left: -680px;*/ /* Adjust this as needed */
+		top: -520px;
+		left: 50%;
+		transform: translateX(-50%) scaleX(.35) scaleY(.3);
+    }
+}
+
+/* Very small screens */
+@media (max-width: 390px) {
+    .creator {
+        /*left: -690px;*/ /* Further adjustment */
+		top: -560px;
+		left: 50%;
+		transform: translateX(-50%) scaleX(.33) scaleY(.3);
+    }
+}
+
+
+	/* Add these styles to your CSS */
+	.booger p, .boogerTwo p {
+		/* Counter-transform to make text readable */
+		position: relative;
+		z-index: 2; /* Place above the triangle */
+		font-weight: bold;
+		color: #000;
+		font-size: 16px;
+		text-align: center;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+  	}
+  
+  	/* Counter-transform for the text in the first triangle */
+  	.booger p {
+		transform: rotate(45deg) skewX(10deg) scale(1, 1.155);
+  	}
+  
+  	/* Counter-transform for the text in the second triangle (which has additional rotate(180deg)) */
+  	.boogerTwo p {
+		transform: rotate(45deg) skewX(10deg) scale(1, 1.155) rotate(180deg);
+  	}
+
+      
+
+
+	#header .logo {
+		position: relative;
+		width: 100%;
+		height: 0;
+		overflow: visible;
+		z-index: 10002;
+	}
+	
+	#header .logo img {
+		font-family: "Pacifico", cursive;
+		font-size: 2.5em;
+		letter-spacing: 2px;
+		position: absolute;
+		top: calc(-525px - 100%);
+		left: 50%;
+		transform: translateX(-50%) scaleX(.3) scaleY(.25);
+		display: block;
+		z-index: 10002;
+	}
