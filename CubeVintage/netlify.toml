@@ -5,7 +5,7 @@
 [dev]
   command = "npm run dev"  # Change this if using a specific development server
   port = 8888
-  targetPort = 3000  # Change to match your local dev server port
+  targetPort = 5500  # Change to match your local dev server port
 
 [build.environment]
   NODE_VERSION = "18"  # Change to your Node.js version if needed
