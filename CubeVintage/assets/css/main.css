@@ -4109,7 +4109,7 @@ nav.right a {
 
 	body {
 		padding-top: 6em;
-		background-image: url('/images/mainBack.jpg');
+		background-image: url('.../images/mainBack.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -4140,7 +4140,7 @@ nav.right a {
     	left: 0;
     	width: 100%;
     	height: 100%;
-    	background-image: url('/images/cubeBack.jpg');
+    	background-image: url('.../images/cubeBack.jpg');
     	background-position: center;
     	background-size: 100% auto;/* cover */
     	z-index: -1;
