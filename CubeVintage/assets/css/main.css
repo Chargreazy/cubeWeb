@@ -4593,14 +4593,6 @@ a[href="#menu"] {
   	.boogerTwo::before, .boogerTwo::after {
 		background: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
   	}*/
-  
-  	/* Make text more visible against dark background */
-  	.booger p, .boogerTwo p {
-		color: #000;
-		font-weight: bold;
-		position: relative;
-		z-index: 2;
-  	}
 /* Add these styles to your CSS */
 .booger p, .boogerTwo p {
 	/* Counter-transform to make text readable */
@@ -4613,16 +4605,17 @@ a[href="#menu"] {
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	font-family: 'Black Demon', sans-serif;
   }
 
 /* Counter-transform for the text in the first triangle */
 .booger p {
-	transform: rotate(45deg)  scale(1, 1.5);
+	transform: rotate(45deg)  scale(2.2, 2.4);
 }
 
 /* Counter-transform for the text in the second triangle (which has additional rotate(180deg)) */
 .boogerTwo p {
-	transform: rotate(45deg)  scale(1, 1.5) rotate(180deg);
+	transform: rotate(45deg)  scale(2.2, 2.4) rotate(180deg);
 }
   
   
