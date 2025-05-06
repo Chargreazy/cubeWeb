@@ -7,6 +7,13 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+/* Black Demon font*/
+/* Black demon font */
+@font-face {
+	font-family: 'Black Demon';
+	src: url(/assets/fonts/black_demon/BlackDemon.ttf);
+}
+
 
 /* Reset */
 
@@ -2525,6 +2532,12 @@ body {
 	#slider-container #slider .slide span {
         font-size: 25px;
     }
+}
+
+.balls{
+	font-family: 'Black Demon', sans-serif;
+	color: black;
+	font-size: medium;
 }
 
 /* Extra large devices (993px to 1440px) */
