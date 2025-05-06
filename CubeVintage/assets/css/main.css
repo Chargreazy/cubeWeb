@@ -11,7 +11,7 @@
 /* Black demon font */
 @font-face {
 	font-family: 'Black Demon';
-	src: url('/assets/fonts/black_demon/BlackDemon.ttf');
+	src: url('../assets/fonts/black_demon/BlackDemon.ttf');
 }
 
 
@@ -4472,7 +4472,7 @@ a[href="#menu"] {
     justify-content: flex-end; /* Pushes content to the bottom */
     align-items: center;
     padding: 14em 0 12em 0;
-    background-image: url('/assets/mainBack.jpeg');
+    background-image: url('/asset/mainBack.jpeg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
