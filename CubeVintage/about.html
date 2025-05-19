@@ -43,6 +43,188 @@
                 <h1>About page</h1>
                 <h3>Similar to Grailed or Depop but you don’t have to worry about being washed out by the rest the crowd, we assure that your page is top priority being a small business, we encourage you to grow as a company with the help of our advertisements and top search first concern. We inspect every item of clothing purchased through us to assure top quality for customers.</h3>
             </section>
-            <script src="assets/js/main.js"></script>
+            <script>
+		    // Add this at the bottom of your JS file, after everything else
+		(function() {
+		    // Wait for everything to load
+		    window.addEventListener('load', function() {
+		      // Simple debug function to help identify issues
+		      function debugMenu() {
+		        // Add necessary click/touch handlers directly
+		        var menuLinks = document.querySelectorAll('a[href="#menu"]');
+		        
+		        for (var i = 0; i < menuLinks.length; i++) {
+		          // Remove any existing handlers to avoid conflicts
+		          var clone = menuLinks[i].cloneNode(true);
+		          if (menuLinks[i].parentNode) {
+		            menuLinks[i].parentNode.replaceChild(clone, menuLinks[i]);
+		          }
+		          
+		          // Add our basic handler that just targets the panel directly
+		          clone.addEventListener('click', function(e) {
+		            e.preventDefault();
+		            e.stopPropagation();
+		            
+		            // Find the menu
+		            var menu = document.getElementById('menu');
+		            if (menu) {
+		              // Toggle the visible class directly
+		              if (menu.classList.contains('visible')) {
+		                menu.classList.remove('visible');
+		                document.body.classList.remove('is-menu-visible');
+		              } else {
+		                menu.classList.add('visible');
+		                document.body.classList.add('is-menu-visible');
+		              }
+		            }
+		          });
+		          
+		          // Ensure it works for touch too
+		          clone.addEventListener('touchend', function(e) {
+		            e.preventDefault();
+		            e.stopPropagation();
+		            
+		            // Find the menu
+		            var menu = document.getElementById('menu');
+		            if (menu) {
+		              // Toggle the visible class directly
+		              if (menu.classList.contains('visible')) {
+		                menu.classList.remove('visible');
+		                document.body.classList.remove('is-menu-visible');
+		              } else {
+		                menu.classList.add('visible');
+		                document.body.classList.add('is-menu-visible');
+		              }
+		            }
+		          });
+		        }
+		        
+		        // Ensure the close button exists
+		        var menu = document.getElementById('menu');
+		        var closeBtn = document.querySelector('#menu .close');
+		        
+		        if (!closeBtn && menu) {
+		          // Create the close button if it doesn't exist
+		          closeBtn = document.createElement('a');
+		          closeBtn.href = "#menu";
+		          closeBtn.className = "close";
+		          closeBtn.innerHTML = ""; // Leave empty as your CSS likely adds the X
+		          menu.insertBefore(closeBtn, menu.firstChild);
+		        }
+		        
+		        // Handle the close button clicks/touches
+		        if (closeBtn) {
+		          closeBtn.addEventListener('click', function(e) {
+		            e.preventDefault();
+		            if (menu) {
+		              menu.classList.remove('visible');
+		              document.body.classList.remove('is-menu-visible');
+		            }
+		          });
+		          
+		          closeBtn.addEventListener('touchend', function(e) {
+		            e.preventDefault();
+		            if (menu) {
+		              menu.classList.remove('visible');
+		              document.body.classList.remove('is-menu-visible');
+		            }
+		          });
+		        }
+		      }
+		      
+		      // Run the debug function
+		      setTimeout(debugMenu, 1000);
+		    });
+		  })();
+		
+		/* Dropdown menu */
+		function toggleDropdown(event) {
+		    event.preventDefault();
+		    
+		    // Toggle the dropdown
+		    var dropdown = document.getElementById("myDropdown");
+		    dropdown.classList.toggle("grow");
+		    
+		    // Calculate the dropdown height only when it's visible
+		    if (dropdown.classList.contains("grow")) {
+		        // Get the actual height of the dropdown
+		        var dropdownHeight = dropdown.offsetHeight;
+		        
+		        // Get the elements that need to be pushed down
+		        var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		        
+		        // Apply the calculated height to push them down
+		        for (var i = 0; i < followingItems.length; i++) {
+		            followingItems[i].style.transform = "translateY(" + dropdownHeight + "px)";
+		        }
+		    } else {
+		        // Reset the transform when dropdown is closed
+		        var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		        for (var i = 0; i < followingItems.length; i++) {
+		            followingItems[i].style.transform = "translateY(0)";
+		        }
+		    }
+		}
+		
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		    if (!event.target.matches('#poop') && !event.target.matches('.plus')) {
+		        var dropdown = document.getElementById("myDropdown");
+		        if (dropdown.classList.contains('grow')) {
+		            dropdown.classList.remove('grow');
+		            
+		            // Reset the transform when dropdown is closed
+		            var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		            for (var i = 0; i < followingItems.length; i++) {
+		                followingItems[i].style.transform = "translateY(0)";
+		            }
+		        }
+		    }
+		}
+		
+		function toggleDropdown(event) {
+		    event.preventDefault();
+		    
+		    // Toggle the dropdown
+		    var dropdown = document.getElementById("myDropdown");
+		    dropdown.classList.toggle("grow");
+		    
+		    // Calculate the dropdown height only when it's visible
+		    if (dropdown.classList.contains("grow")) {
+		        // Get the actual height of the dropdown
+		        var dropdownHeight = dropdown.offsetHeight;
+		        
+		        // Get the elements that need to be pushed down
+		        var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		        
+		        // Apply the calculated height to push them down
+		        for (var i = 0; i < followingItems.length; i++) {
+		            followingItems[i].style.transform = "translateY(" + dropdownHeight + "px)";
+		        }
+		    } else {
+		        // Reset the transform when dropdown is closed
+		        var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		        for (var i = 0; i < followingItems.length; i++) {
+		            followingItems[i].style.transform = "translateY(0)";
+		        }
+		    }
+		}
+		
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		    if (!event.target.matches('#poop') && !event.target.matches('.plus')) {
+		        var dropdown = document.getElementById("myDropdown");
+		        if (dropdown.classList.contains('grow')) {
+		            dropdown.classList.remove('grow');
+		            
+		            // Reset the transform when dropdown is closed
+		            var followingItems = document.querySelectorAll('.links > li:nth-child(4), .links > li:nth-child(5)');
+		            for (var i = 0; i < followingItems.length; i++) {
+		                followingItems[i].style.transform = "translateY(0)";
+		            }
+		        }
+		    }
+		}
+	    </script>
     </body>
 </html>
